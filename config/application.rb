@@ -34,5 +34,8 @@ module ShoeStore
 
     # Adds the view folder to locales
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', 'views', '*.{rb,yml}').to_s]
+    
+
+
   end
 end

@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 # A simple Rails wrapper for Google Material Icons
 gem 'material_icons'
+gem 'material_design_lite-sass'
+gem 'material_design_lite-rails', '~> 1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
