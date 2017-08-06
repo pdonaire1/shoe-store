@@ -10,6 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery-1.7.1.min
+//= require datatable/jquery.dataTables.min
+//= require datatable/dataTables.material.min
 //= require rails-ujs
-//= require_tree .
 //= require material
+//= require shoes
+//= require_self

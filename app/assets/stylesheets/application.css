@@ -15,5 +15,6 @@
  *= require theme
  *= require material_icons
  *= require material
- 
+ *= require datatable/dataTables.material.min
+ *= require shoes
  */
