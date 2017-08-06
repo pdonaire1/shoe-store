@@ -5,6 +5,7 @@ es:
       shoe: Zapatillas
     attributes:
       shoe:
+        photo: Foto
         model: Modelo
         brand: Marca
         release_year: Año Lanzamiento

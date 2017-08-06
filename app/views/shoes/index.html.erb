@@ -1,5 +1,5 @@
 <div class="mdl-cell mdl-cell--12-col">
-  <p id="notice"><%= notice %></p>
+  
 
   <h3><%= I18n.t('activerecord.models.shoe') %></h3>
 
@@ -13,6 +13,7 @@
     <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp full-width">
       <thead>
         <tr>
+          <th class="mdl-data-table__cell--non-numeric"><%= i18n.t :photo %></th>
           <th class="mdl-data-table__cell--non-numeric"><%= i18n.t :model %></th>
           <th class="mdl-data-table__cell--non-numeric"><%= i18n.t :brand %></th>
           <th class="mdl-data-table__cell--non-numeric">Isbn</th>
@@ -25,6 +26,7 @@
       <tbody>
         <% @shoes.each do |shoe| %>
           <tr>
+            <td class="mdl-data-table__cell--non-numeric"><img src="<%= shoe.photo.url(:thumb) %>" /></td>
             <td class="mdl-data-table__cell--non-numeric"><%= shoe.model %></td>
             <td class="mdl-data-table__cell--non-numeric"><%= shoe.brand %></td>
             <td class="mdl-data-table__cell--non-numeric"><%= shoe.isbn %></td>

@@ -1,4 +1,5 @@
-<%= form_with(model: shoe, local: true) do |form| %>
+
+<%= form_with(model: shoe, local: true, multipart: true)  do |form| %>
   <% if shoe.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(shoe.errors.count, "error") %> prohibited this shoe from being saved:</h2>
@@ -35,6 +36,13 @@
     <%= form.label :sku , :html =>{:class => "textfield__label"} %>
     <%= form.number_field :sku, id: :shoe_sku, :html =>{:class=> "mdl-textfield__input"} %>
   </div>
+  <div class="field mdl-textfield mdl-js-textfield">
+    <%= form.label :photo , :html =>{:class => "textfield__label"} %>
+    <%= form.file_field :photo %>
+  </div>
+  <% if shoe.photo_file_name != nil %>
+    <img src="<%= shoe.photo.url(:thumb) %>" />
+  <% end %>
 
   <div class="actions">
     <%= form.submit nil, :class=> "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>

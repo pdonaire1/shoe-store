@@ -31,7 +31,18 @@
       </div>
       <main class="mdl-layout__content">
         <div class="page-content">
-          <div class="mdl-grid"><%= yield %></div>
+          <% if notice %>
+            <br />
+            <p id="notice">
+              <span class="mdl-chip mdl-chip--contact">
+                <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">!</span>
+                <span class="mdl-chip__text"><%= notice %></span>
+              </span>
+            </p>
+          <% end %>
+          <div class="mdl-grid">
+            <%= yield %>
+          </div>
         </div>
       </main>
       <footer class="mdl-mini-footer">
