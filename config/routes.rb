@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :brands
   root 'shoes#index' # shortcut for the above
 
   resources :shoes

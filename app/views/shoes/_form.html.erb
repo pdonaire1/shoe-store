@@ -19,7 +19,7 @@
 
   <div class="field mdl-textfield mdl-js-textfield">
     <%= form.label :brand , :html =>{:class => "textfield__label"} %>
-    <%= form.text_field :brand, id: :shoe_brand, :html =>{:class=> "mdl-textfield__input"} %>
+    <%= form.collection_select :brand_id, Brand.all, :id, :name, prompt: true %>
   </div>
 
   <div class="field mdl-textfield mdl-js-textfield">
