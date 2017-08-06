@@ -11,9 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :brand_name %>
+
+
+  <div class="field mdl-textfield mdl-js-textfield ">
+    <%= form.label :name, :class=> "mdl-textfield__input" %>
+    <%= form.text_field :name, id: :brand_name, :class => "textfield__label"%>
   </div>
 
 

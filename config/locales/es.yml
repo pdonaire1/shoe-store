@@ -9,6 +9,8 @@ es:
         model: Modelo
         brand: Marca
         release_year: Año Lanzamiento
+      brand: 
+        name: "Nombre"
   date:
     abbr_day_names:
     - dom

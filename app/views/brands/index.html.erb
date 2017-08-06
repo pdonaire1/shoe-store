@@ -1,6 +1,11 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Brands</h1>
+
+<%= link_to new_brand_path, class: 'fab-action' do %>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+    <i class="material-icons">add</i>
+  </button>
+<% end %>
 
 <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp full-width">
   <thead>
@@ -24,6 +29,5 @@
 
 <br>
 
-<%= link_to 'New Brand', new_brand_path %>
 
 

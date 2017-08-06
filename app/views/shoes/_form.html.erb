@@ -13,31 +13,31 @@
   <% end %>
 
   <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :model , :html =>{:class => "textfield__label"} %>
-    <%= form.text_field :model, id: :shoe_model, :html =>{:class=> "mdl-textfield__input"} %>
+    <%= form.label :model , :class => "textfield__label" %>
+    <%= form.text_field :model, id: :shoe_model, :class=> "mdl-textfield__input" %>
   </div>
 
   <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :brand , :html =>{:class => "textfield__label"} %>
+    <%= form.label :brand , :class => "textfield__label" %>
     <%= form.collection_select :brand_id, Brand.all, :id, :name, prompt: true %>
   </div>
 
   <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :isbn , :html =>{:class => "textfield__label"} %>
-    <%= form.text_field :isbn, id: :shoe_isbn, :html =>{:class=> "mdl-textfield__input"} %>
+    <%= form.label :isbn , :class => "textfield__label" %>
+    <%= form.text_field :isbn, id: :shoe_isbn, :class=> "mdl-textfield__input" %>
   </div>
 
   <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :release_year , :html =>{:class => "textfield__label"} %>
-    <%= form.number_field :release_year, id: :sho, :html =>{:classe_release_year=> "mdl-textfield__input"} %>
+    <%= form.label :release_year , :class => "textfield__label" %>
+    <%= form.number_field :release_year, id: :sho, :_year=> "mdl-textfield__input" %>
   </div>
 
   <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :sku , :html =>{:class => "textfield__label"} %>
-    <%= form.number_field :sku, id: :shoe_sku, :html =>{:class=> "mdl-textfield__input"} %>
+    <%= form.label :sku , :class => "textfield__label" %>
+    <%= form.number_field :sku, id: :shoe_sku, :class=> "mdl-textfield__input" %>
   </div>
   <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :photo , :html =>{:class => "textfield__label"} %>
+    <%= form.label :photo , :class => "textfield__label" %>
     <%= form.file_field :photo %>
   </div>
   <% if shoe.photo_file_name != nil %>
