@@ -1,0 +1,9 @@
+json.id @shoe.id
+json.model @shoe.model
+json.brand_id @shoe.brand
+json.isbn @shoe.isbn
+json.release_year @shoe.release_year
+json.sku @shoe.sku
+json.photo_original @shoe.photo.url
+json.photo_medium @shoe.photo.url(:medium)
+json.photo_thumb @shoe.photo.url(:thumb)
