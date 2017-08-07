@@ -12,39 +12,55 @@
     </div>
   <% end %>
 
-  <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :model , :class => "textfield__label" %>
-    <%= form.text_field :model, id: :shoe_model, :class=> "mdl-textfield__input" %>
-  </div>
 
-  <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :brand , :class => "textfield__label" %>
-    <%= form.collection_select :brand_id, Brand.all, :id, :name, prompt: true %>
-  </div>
+  <% I18n.with_options(scope: 'activerecord.attributes.shoe') do |i18n| %>
+    <table class="mdl-data-table  mdl-data-table--selectable mdl-shadow--2dp full-width">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric"><%= i18n.t :model %></th>
+          <th class="mdl-data-table__cell--non-numeric"><%= i18n.t :brand %></th>
+          <th class="mdl-data-table__cell--non-numeric">Isbn</th>
+          <th class="mdl-data-table__cell--non-numeric"><%= i18n.t :release_year %></th>
+          <th class="mdl-data-table__cell--non-numeric">SKU</th>
+          <th class="mdl-data-table__cell--non-numeric"><%= i18n.t :photo %></th>
+          <th ></th>
+        </tr>
+      </thead>
 
-  <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :isbn , :class => "textfield__label" %>
-    <%= form.text_field :isbn, id: :shoe_isbn, :class=> "mdl-textfield__input" %>
-  </div>
-
-  <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :release_year , :class => "textfield__label" %>
-    <%= form.number_field :release_year, id: :sho, :_year=> "mdl-textfield__input" %>
-  </div>
-
-  <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :sku , :class => "textfield__label" %>
-    <%= form.number_field :sku, id: :shoe_sku, :class=> "mdl-textfield__input" %>
-  </div>
-  <div class="field mdl-textfield mdl-js-textfield">
-    <%= form.label :photo , :class => "textfield__label" %>
-    <%= form.file_field :photo %>
-  </div>
-  <% if shoe.photo_file_name != nil %>
-    <img src="<%= shoe.photo.url(:thumb) %>" />
+      <tbody>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">
+            <!-- <div class="field mdl-textfield mdl-js-textfield">
+              <%#= form.label :model , :class => "textfield__label" %>
+            </div> -->
+            <%= form.text_field :model, id: :shoe_model, :class=> "mdl-textfield__input" %>
+          </th>
+          <th class="mdl-data-table__cell--non-numeric">
+            <%= form.collection_select :brand_id, Brand.all, :id, :name, prompt: true %>
+          </th>
+          <th class="mdl-data-table__cell--non-numeric">
+            <%= form.text_field :isbn, id: :shoe_isbn, :class=> "mdl-textfield__input" %>
+          </th>
+          <th class="mdl-data-table__cell--non-numeric">
+            <%= form.number_field :release_year, id: :sho, :_year=> "mdl-textfield__input" %>
+          </th>
+          <th class="mdl-data-table__cell--non-numeric">
+            <%= form.number_field :sku, id: :shoe_sku, :class=> "mdl-textfield__input" %>
+          </th>
+          <th class="mdl-data-table__cell--non-numeric">
+            <%= form.file_field :photo %>
+            <% if shoe.photo_file_name != nil %>
+              <img src="<%= shoe.photo.url(:thumb) %>" />
+            <% end %>
+          </th>
+          <th class="mdl-data-table__cell--non-numeric">
+            <%= form.submit nil, :class=> "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+          </th>
+        </tr>
+      </tbody>
+    </table>
   <% end %>
 
-  <div class="actions">
-    <%= form.submit nil, :class=> "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
-  </div>
+
 <% end %>
+<div style="width: 100%;"></div>

@@ -13,15 +13,32 @@
 
 
 
-  <div class="field mdl-textfield mdl-js-textfield ">
-    <%= form.label :name, :class=> "mdl-textfield__input" %>
-    <%= form.text_field :name, id: :brand_name, :class => "textfield__label"%>
-  </div>
+<table class="mdl-data-table  mdl-data-table--selectable mdl-shadow--2dp full-width">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+      <th class="mdl-data-table__cell--non-numeric">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">
+        
+        <!-- <div class="field mdl-textfield mdl-js-textfield ">
+          <%#= form.label :name, :class=> "mdl-textfield__input" %>
+        </div> -->
+          <%= form.text_field :name, id: :brand_name, :class => "textfield__label"%>
+      </th>
+      <th class="mdl-data-table__cell--non-numeric">
+        <div class="actions">
+          <%= form.submit nil, :class=> "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+        </div>
+      </th>
+    </tr>
+  </tbody>
+</table>
 
 
-  <div class="actions">
-    <%= form.submit nil, :class=> "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
-  </div>
-
-  <br />
 <% end %>
+<div style="width: 100%;"></div>
