@@ -19,15 +19,17 @@
     <% @brands.each do |brand| %>
       <tr>
         <td class="mdl-data-table__cell--non-numeric"><%= brand.name %></td>
-        <td class="mdl-data-table__cell--non-numeric"><%= link_to 'Show', brand %></td>
-        <td class="mdl-data-table__cell--non-numeric"><%= link_to 'Edit', edit_brand_path(brand) %></td>
-        <td class="mdl-data-table__cell--non-numeric"><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="mdl-data-table__cell--non-numeric">
+          <%= link_to content_tag('i','visibility', class: 'material-icons'), brand %>
+        </td>
+        <td class="mdl-data-table__cell--non-numeric">
+          <%= link_to content_tag('i','edit', class: 'material-icons'), edit_brand_path(brand) %>
+        </td>
+        <td class="mdl-data-table__cell--non-numeric">
+          <%= link_to content_tag('i','delete', class: 'material-icons'), brand, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-
 
