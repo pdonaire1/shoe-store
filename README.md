@@ -44,7 +44,6 @@ Simple API REST
         shoe[photo] (file format)
     * Delete:
       DETELE http://localhost:3000/api/shoes/:id
-    """
 ```
 
 * Instalation with rvm:
