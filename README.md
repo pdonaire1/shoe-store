@@ -6,7 +6,7 @@ These steps are necessary to the application up and running.
     * \>= 2.3.4
 * Rails version
     * \>= 5.1 
-    * gem pristine --all
+    * gem pristine --all # (if there is a problem with the installation)
     
 * System dependencies
   * Yarn
